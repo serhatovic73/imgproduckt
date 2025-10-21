@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serhat Öztürk - CV</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Genel */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        h2 {
+            font-weight: 700;
+            margin-bottom: 30px;
+        }
+
+        /* Navbar ikonları */
+        .navbar-nav .nav-link i {
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        /* Hero */
+        #hero {
+            background: linear-gradient(135deg, #1e1e2f, #3e3e5e);
+        }
+
+        #hero img {
+            border: 4px solid #ffc107;
+
+        }
+
+        #hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        #hero p.lead {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        #hero .social a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: #ffc107;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        #hero .social a:hover {
+            transform: translateY(-5px);
+            color: #fff;
+        }
+
+        /* Timeline Deneyim */
+        .timeline {
+            border-left: 3px solid #ffc107;
+            margin-left: 20px;
+            padding-left: 20px;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+        }
+
+        /* Projeler */
+        .project-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Beceriler */
+        .progress {
+            height: 25px;
+            margin-bottom: 15px;
+        }
+
+        /* İletişim */
+        .contact-info p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .contact-info i {
+            color: #ffc107;
+            margin-right: 8px;
+        }
+
+        #contact .social a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: #333;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        #contact .social a:hover {
+            transform: translateY(-5px);
+            color: #ffc107;
+        }
+
+        /* Footer */
+        footer {
+            font-size: 0.9rem;
+        }
+
+        .project-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-card .card-img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .overlay-content {
+            background: rgba(0, 0, 0, 0.6);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .project-card:hover .overlay-content {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Serhat Gicer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><i class="fas fa-info-circle"></i>
+                            Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><i class="fas fa-chart-line"></i>
+                            Beceriler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience"><i class="fas fa-briefcase"></i>
+                            Deneyim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education"><i class="fas fa-graduation-cap"></i>
+                            Eğitim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects"><i class="fas fa-project-diagram"></i>
+                            Projeler</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><i class="fas fa-envelope"></i>
+                            İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="hero" class="text-center py-5 bg-dark text-white">
+        <div class="container">
+            <img src="images/serhat.jpg" alt="Serhat" class="rounded-circle mb-3" width="250" height="250"
+                style="object-fit: cover; border: 4px solid #ffc107;">
+            <h1>Serhat Gicer</h1>
+            <p class="lead">Front-End Developer & UI/UX Designer</p>
+            <div class="social mt-3">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hakkımda -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Hakkımda</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p>Merhaba! Ben Serhat, front-end geliştirme ve UI/UX tasarım konusunda tutkulu bir yazılımcıyım.
+                        Modern ve kullanıcı odaklı web projeleri geliştirmeye odaklanıyorum.</p>
+                    <p>HTML, CSS, JavaScript, Bootstrap ve React konularında deneyim sahibiyim.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="images/serhat.jpg" alt="Serhat" class="img-fluid rounded shadow" style="max-width: 400px;
+            height: 400px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beceriler -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Beceriler</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5>HTML & CSS</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 95%;">95%</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>JavaScript</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>React</h5>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deneyim -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Deneyim</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5>Front-End Developer</h5>
+                    <span>2023 - Günümüz | Modern Lezzet</span>
+                    <p>Web uygulamaları ve responsive tasarımlar geliştirme.</p>
+                </div>
+                <div class="timeline-item">
+                    <h5>UI/UX Designer</h5>
+                    <span>2022 - 2023 | Kreatif Ajans</span>
+                    <p>Kullanıcı odaklı web tasarımları ve prototipler hazırlama.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eğitim -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Eğitim</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5>Bilgisayar Mühendisliği</h5>
+                    <span>2018 - 2022 | İstanbul Üniversitesi</span>
+                    <p>Front-end ve web teknolojileri üzerine yoğun eğitim.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>UI/UX Tasarım Sertifikası</h5>
+                    <span>2022 | Udemy / Online</span>
+                    <p>Profesyonel kullanıcı deneyimi ve tasarım eğitimi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projeler -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Projelerim</h2>
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card project-card overflow-hidden border-0">
+                        <img src="images/meze.webp" class="card-img" alt="Modern Lezzet">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-center align-items-center overlay-content text-center">
+                            <h5 class="card-title text-white">Modern Lezzet</h5>
+                            <p class="card-text text-white">Restoran ve menü tasarım projesi</p>
+                            <a href="#" class="btn btn-warning btn-sm">Ziyaret Et</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card project-card overflow-hidden border-0">
+                        <img src="images/pide.webp" class="card-img" alt="Portföy Sitesi">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-center align-items-center overlay-content text-center">
+                            <h5 class="card-title text-white">Portföy Sitesi</h5>
+                            <p class="card-text text-white">Kendi kişisel portföyüm</p>
+                            <a href="#" class="btn btn-warning btn-sm">Ziyaret Et</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card project-card overflow-hidden border-0">
+                        <img src="images/getränk.webp" class="card-img" alt="E-Ticaret">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-center align-items-center overlay-content text-center">
+                            <h5 class="card-title text-white">E-Ticaret Sitesi</h5>
+                            <p class="card-text text-white">Online ürün satış projesi</p>
+                            <a href="#" class="btn btn-warning btn-sm">Ziyaret Et</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- İletişim -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">İletişim</h2>
+            <div class="row g-4">
+                <div class="col-md-6 mx-auto text-center contact-info">
+                    <p><i class="fas fa-map-marker-alt"></i> Adres: Örnek Mah. No:12, İstanbul, Türkiye</p>
+                    <p><i class="fas fa-phone-alt"></i> Telefon: +90 555 123 45 67</p>
+                    <p><i class="fas fa-envelope"></i> Email: info@modernlezzet.com</p>
+                    <div class="social mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-3 bg-dark text-white text-center">
+        © 2025 Modern Lezzet. Made by Serhat
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
